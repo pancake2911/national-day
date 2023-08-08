@@ -14,7 +14,9 @@ def index():
    
     with open('messages.txt', 'r') as file:
       posts = file.readlines()
+      
     return render_template('index.html', posts=posts)
+  return render_template('index.html')
 
 
 app.run(host='0.0.0.0', port=81)
